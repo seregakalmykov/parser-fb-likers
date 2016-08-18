@@ -1,0 +1,19 @@
+{
+    "name": "mac/parser-fb-likers",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Kalmykov Sergey",
+            "email": "seregakalmykov@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "tobscure/json-api": "^0.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "liw\\": ""
+        }
+    }
+}
