@@ -21,7 +21,8 @@ class FacebookAuth {
         curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36");
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
-        $page = curl_exec($ch) or die(curl_error($ch));
+        curl_exec($ch) or die(curl_error($ch));
+        curl_exec($ch) or die(curl_error($ch));
         curl_close($ch);
     }
 

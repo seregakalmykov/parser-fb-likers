@@ -6,10 +6,12 @@
     $fbLogin = $appParams['fbLogin'];
 
     \liw\app\helpers\FacebookAuth::auth($fbLogin['email'],$fbLogin['pass']);
-    \liw\app\helpers\FacebookAuth::auth($fbLogin['email'],$fbLogin['pass']);
 
     $parser = new \liw\app\FacebookParser($appParams['parsePage'], $appParams['countScroll']); //page id & count of "scrolling"
     $content = $parser->parse(); // init
+
+    \liw\app\helpers\FacebookAuth::quit();
+
     if ($content !== ''){
         $persons = \liw\app\PrepareData::prepare($content);
 
@@ -30,5 +32,4 @@
         die ('incorect auth');
     }
 
-    \liw\app\helpers\FacebookAuth::quit();
 ?>
