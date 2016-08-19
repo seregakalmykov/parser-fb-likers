@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'liw\\' => array($baseDir . '/'),
-    'Tobscure\\JsonApi\\' => array($vendorDir . '/tobscure/json-api/src'),
+    'alsvanzelf\\jsonapi\\' => array($vendorDir . '/alsvanzelf/jsonapi/src'),
 );

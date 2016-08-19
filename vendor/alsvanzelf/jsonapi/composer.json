@@ -1,0 +1,23 @@
+{
+	"name": "alsvanzelf/jsonapi",
+	"type": "library",
+	"description": "Simple and human friendly library for api servers (PHP serving out JSON)",
+	"keywords": ["jsonapi", "api", "json"],
+	"homepage": "https://github.com/lode/jsonapi",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Lode Claassen",
+			"email": "lode@alsvanzelf.nl",
+			"homepage": "http://www.lodeclaassen.nl/"
+		}
+	],
+	"require": {
+		"php": ">=5.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"alsvanzelf\\jsonapi\\": "src/"
+		}
+	}
+}

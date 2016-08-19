@@ -10,7 +10,6 @@ class PrepareData
         $persons = [];
         $preparedData = self::unComment($data);
         $html = str_get_html($preparedData);
-//        echo $html;
         foreach ($html->find('._5und') as $userDiv){
             $part_name = self::getName($userDiv->find('._5d-5', 0)->innertext);
             $img = $userDiv->find('._fbBrowseXuiResult__profileImage', 0)->src;
@@ -39,11 +38,16 @@ class PrepareData
         $name = '';
         $surname = '';
         $l = strlen($fullname);
+        while($fullname[$i]==' '){
+            $i++;
+        }
         while($fullname[$i]!=' '){
             $name .= $fullname[$i];
             $i++;
         }
-        $i++;
+        while($fullname[$i]==' '){
+            $i++;
+        }
         while($i<$l && $fullname[$i]!=' '){
             $surname .= $fullname[$i];
             $i++;

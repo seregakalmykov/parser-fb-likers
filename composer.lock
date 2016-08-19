@@ -4,38 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1a4de63128e8c6e211ffb672a179c531",
-    "content-hash": "cd5ea0b638fadf9a2eb5deceb0393d35",
+    "hash": "adf1ea365dbf493178172c8205ce592a",
+    "content-hash": "4f0f1bca3741ea2e0ff22ec093e17727",
     "packages": [
         {
-            "name": "tobscure/json-api",
-            "version": "v0.3.0",
+            "name": "alsvanzelf/jsonapi",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tobscure/json-api.git",
-                "reference": "663d1c1299d4363758e8e440e5849134f218f45c"
+                "url": "https://github.com/lode/jsonapi.git",
+                "reference": "d7dc6c3c0e12937e295152dac1bef1ad3a15c190"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobscure/json-api/zipball/663d1c1299d4363758e8e440e5849134f218f45c",
-                "reference": "663d1c1299d4363758e8e440e5849134f218f45c",
+                "url": "https://api.github.com/repos/lode/jsonapi/zipball/d7dc6c3c0e12937e295152dac1bef1ad3a15c190",
+                "reference": "d7dc6c3c0e12937e295152dac1bef1ad3a15c190",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
+                "php": ">=5.4"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Tobscure\\JsonApi\\": "src/"
+                    "alsvanzelf\\jsonapi\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -44,18 +36,19 @@
             ],
             "authors": [
                 {
-                    "name": "Toby Zerner",
-                    "email": "toby.zerner@gmail.com"
+                    "name": "Lode Claassen",
+                    "email": "lode@alsvanzelf.nl",
+                    "homepage": "http://www.lodeclaassen.nl/"
                 }
             ],
-            "description": "JSON-API responses in PHP",
+            "description": "Simple and human friendly library for api servers (PHP serving out JSON)",
+            "homepage": "https://github.com/lode/jsonapi",
             "keywords": [
                 "api",
                 "json",
-                "jsonapi",
-                "standard"
+                "jsonapi"
             ],
-            "time": "2016-03-31 09:25:28"
+            "time": "2016-08-09 14:02:08"
         }
     ],
     "packages-dev": [],
