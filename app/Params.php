@@ -22,9 +22,5 @@ class Params
             "page_number" => 2,
         ],
         "link_add" => '&__user=',
-    ],
-    $fbLogin = [
-        "email" => '',
-        "pass" => '',
     ];
 }

@@ -2,11 +2,13 @@
 
     require(dirname(__FILE__).'/vendor/autoload.php');
     require(dirname(__FILE__).'/app/helpers/simple_html_dom.php');
+    $appParams = require(dirname(__FILE__).'/app/config.php');
+    $fbLogin = $appParams['fbLogin'];
 
-    \liw\app\helpers\FacebookAuth::auth();
-    \liw\app\helpers\FacebookAuth::auth();
+    \liw\app\helpers\FacebookAuth::auth($fbLogin['email'],$fbLogin['pass']);
+    \liw\app\helpers\FacebookAuth::auth($fbLogin['email'],$fbLogin['pass']);
 
-    $parser = new \liw\app\FacebookParser('524285880946743', 4); //page id & count of "scrolling"
+    $parser = new \liw\app\FacebookParser($appParams['parsePage'], $appParams['countScroll']); //page id & count of "scrolling"
     $content = $parser->parse(); // init
     if ($content !== ''){
         $persons = \liw\app\PrepareData::prepare($content);

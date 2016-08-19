@@ -6,12 +6,11 @@ use liw\app\Params;
 
 class FacebookAuth {
 
-    public static function auth()
+    public static function auth($email, $pass)
     {
-        $authParams = Params::$fbLogin;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://www.facebook.com/login.php');
-        curl_setopt($ch, CURLOPT_POSTFIELDS,'email='.urlencode($authParams['email']).'&pass='.urlencode($authParams['pass']).'&login=Login');
+        curl_setopt($ch, CURLOPT_POSTFIELDS,'email='.urlencode($email).'&pass='.urlencode($pass).'&login=Login');
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 3);
@@ -31,4 +30,6 @@ class FacebookAuth {
         unlink(dirname(__FILE__).'/../../cookie.txt');
     }
 
-} 
+}
+
+?>
